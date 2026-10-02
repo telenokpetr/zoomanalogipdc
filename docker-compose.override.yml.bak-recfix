@@ -1,0 +1,11 @@
+services:
+  haproxy:
+    volumes:
+      - ./data/lego/haproxy-ipdc-live.r-company.shop.pem:/etc/haproxy/certs/haproxy-ipdc-live.r-company.shop.pem:ro
+  greenlight:
+    # IGNORE_TLS_CERT_ERRORS=true makes the template use the internal http://10.7.7.34:48083 endpoint,
+    # which Greenlight also puts into the browser join link -> use the public domain instead
+    environment:
+      BIGBLUEBUTTON_ENDPOINT: https://ipdc-live.r-company.shop/bigbluebutton/api
+    extra_hosts:
+      - "ipdc-live.r-company.shop:10.7.7.35"

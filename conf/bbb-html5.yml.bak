@@ -1,0 +1,4 @@
+# this file equals the /etc/bigbluebutton/bbb-html5.yml file referenced in the docs
+public:
+  app:
+    appName: BigBlueButton HTML5 Client (docker)

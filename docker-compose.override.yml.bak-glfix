@@ -1,0 +1,4 @@
+services:
+  haproxy:
+    volumes:
+      - ./data/lego/haproxy-ipdc-live.r-company.shop.pem:/etc/haproxy/certs/haproxy-ipdc-live.r-company.shop.pem:ro

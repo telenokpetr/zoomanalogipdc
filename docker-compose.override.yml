@@ -1,0 +1,14 @@
+# ruby 3.2: File.exists? removed -> patched recording scripts (2026-10-01)
+services:
+  haproxy:
+    volumes:
+    - ./data/lego/haproxy-ipdc-live.r-company.shop.pem:/etc/haproxy/certs/haproxy-ipdc-live.r-company.shop.pem:ro
+  greenlight:
+    environment:
+      BIGBLUEBUTTON_ENDPOINT: https://ipdc-live.r-company.shop/bigbluebutton/api
+    extra_hosts:
+    - ipdc-live.r-company.shop:10.7.7.35
+  recordings:
+    volumes:
+    - ./mod/recordings-patches/sanity.rb:/usr/local/bigbluebutton/core/scripts/sanity/sanity.rb:ro
+    - ./mod/recordings-patches/rap-process-worker.rb:/usr/local/bigbluebutton/core/scripts/rap-process-worker.rb:ro

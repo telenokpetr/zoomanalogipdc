@@ -1,0 +1,18 @@
+# this file equals the /etc/bigbluebutton/bbb-html5.yml file referenced in the docs
+public:
+  app:
+    appName: IPDC.online
+    clientTitle: IPDC.online
+    copyright: "©2026 IPDC.online"
+    showAudioFilters: true
+    defaultSettings:
+      application:
+        darkTheme: true
+        # фильтры микрофона для всех браузеров: шумоподавление, эхоподавление, автоусиление
+        microphoneConstraints:
+          noiseSuppression:
+            ideal: true
+          echoCancellation:
+            ideal: true
+          autoGainControl:
+            ideal: true

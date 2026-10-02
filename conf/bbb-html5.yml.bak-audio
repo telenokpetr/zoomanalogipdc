@@ -1,0 +1,9 @@
+# this file equals the /etc/bigbluebutton/bbb-html5.yml file referenced in the docs
+public:
+  app:
+    appName: IPDC.online
+    clientTitle: IPDC.online
+    copyright: "©2026 IPDC.online"
+    defaultSettings:
+      application:
+        darkTheme: true
